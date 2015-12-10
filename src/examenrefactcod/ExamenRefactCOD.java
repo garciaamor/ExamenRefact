@@ -35,7 +35,7 @@ public class ExamenRefactCOD {
                     if (i % 2 == 0) {
                         p = false;
                     } else {
-                        int contador1 = 0;
+                        int contadorCondi = 0;
                         int j = 1;
                         int k = (i - 1) / 2;
                         if (k % 2 == 0) {
@@ -44,15 +44,15 @@ public class ExamenRefactCOD {
 
                         while (j <= k) {
                             if (i % j == 0) {
-                                contador1++;
+                                contadorCondi++;
                             }
                             j += 2;
-                            if (contador1 == 2) {
+                            if (contadorCondi == 2) {
                                 j = k + 1;
                             }
                         }
 
-                        if (contador1 == 1) {
+                        if (contadorCondi == 1) {
                             p = true;
                         }
                     }
