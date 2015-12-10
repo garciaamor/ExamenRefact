@@ -13,22 +13,22 @@ public class ExamenRefactCOD {
 
     public static void main(String arg[]) {
         int digCambio = 3;
-        int ndig = 0;
+        int digitos = 0;
         if (digCambio <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         for (int i = 1; i <= 99999; i++) {
-            int aux = i;
+            int divis = i;
 
             int contador = 0;
 
-            while (aux != 0) {
-                aux = aux / 10;
+            while (divis != 0) {
+                divis = divis / 10;
                 contador++;
             }
-            ndig = contador;
+            digitos = contador;
 
-            if (ndig == digCambio) {
+            if (digitos == digCambio) {
                 if (i < 4) {
                     p = true;
                 } else {
