@@ -12,11 +12,9 @@ public class ExamenRefactCOD {
     public static boolean p = false;
 
     public static void main(String arg[]) {
-        int digCambio = 3;
+        int digInicial = -1;
         int digitos = 0;
-        if (digCambio <= 0) {
-            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
-        }
+        validar(digInicial);
         for (int i = 1; i <= 99999; i++) {
             int divis = i;
 
@@ -28,7 +26,7 @@ public class ExamenRefactCOD {
             }
             digitos = cuenta;
 
-            if (digitos == digCambio) {
+            if (digitos == digInicial) {
                 if (i < 4) {
                     p = true;
                 } else {
@@ -62,6 +60,12 @@ public class ExamenRefactCOD {
                     System.out.println(i);
                 }
             }
+        }
+    }
+
+    public static void validar(int digCambio) {
+        if (digCambio <= 0) {
+            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
     }
 
