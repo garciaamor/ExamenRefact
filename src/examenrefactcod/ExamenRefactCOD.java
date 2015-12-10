@@ -12,7 +12,7 @@ public class ExamenRefactCOD {
     public static boolean p = false;
 
     public static void main(String arg[]) {
-        int digInicial = -1;
+        int digInicial = 3;
         int digitos = 0;
         validar(digInicial);
         for (int i = 1; i <= 99999; i++) {
