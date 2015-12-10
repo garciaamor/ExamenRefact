@@ -20,13 +20,13 @@ public class ExamenRefactCOD {
         for (int i = 1; i <= 99999; i++) {
             int divis = i;
 
-            int contador = 0;
+            int cuenta = 0;
 
             while (divis != 0) {
                 divis = divis / 10;
-                contador++;
+                cuenta++;
             }
-            digitos = contador;
+            digitos = cuenta;
 
             if (digitos == digCambio) {
                 if (i < 4) {
