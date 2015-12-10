@@ -26,31 +26,35 @@ public class ExamenRefactCOD {
             }
             digitos = cuenta;
 
-            if (digitos == digInicial) {
-                if (i < 4) {
-                    p = true;
+            principal(digitos, digInicial, i);
+        }
+    }
+
+    public static void principal(int digitos, int digInicial, int i) {
+        if (digitos == digInicial) {
+            if (i < 4) {
+                p = true;
+            } else {
+                if (i % 2 == 0) {
+                    p = false;
                 } else {
-                    if (i % 2 == 0) {
-                        p = false;
-                    } else {
-                        int contadorCondi = 0;
-                        int j = 1;
-                        int k = (i - 1) / 2;
-                        if (k % 2 == 0) {
-                            k--;
-                        }
-
-                        contadorCondi = comparacion(j, k, i, contadorCondi);
-
-                        if (contadorCondi == 1) {
-                            p = true;
-                        }
+                    int contadorCondi = 0;
+                    int j = 1;
+                    int k = (i - 1) / 2;
+                    if (k % 2 == 0) {
+                        k--;
+                    }
+                    
+                    contadorCondi = comparacion(j, k, i, contadorCondi);
+                    
+                    if (contadorCondi == 1) {
+                        p = true;
                     }
                 }
-
-                if (p == true) {
-                    System.out.println(i);
-                }
+            }
+            
+            if (p == true) {
+                System.out.println(i);
             }
         }
     }
