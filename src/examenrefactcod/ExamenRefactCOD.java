@@ -40,15 +40,7 @@ public class ExamenRefactCOD {
                             k--;
                         }
 
-                        while (j <= k) {
-                            if (i % j == 0) {
-                                contadorCondi++;
-                            }
-                            j += 2;
-                            if (contadorCondi == 2) {
-                                j = k + 1;
-                            }
-                        }
+                        contadorCondi = comparacion(j, k, i, contadorCondi);
 
                         if (contadorCondi == 1) {
                             p = true;
@@ -61,6 +53,19 @@ public class ExamenRefactCOD {
                 }
             }
         }
+    }
+
+    public static int comparacion(int j, int k, int i, int contadorCondi) {
+        while (j <= k) {
+            if (i % j == 0) {
+                contadorCondi++;
+            }
+            j += 2;
+            if (contadorCondi == 2) {
+                j = k + 1;
+            }
+        }
+        return contadorCondi;
     }
 
     public static void validar(int digCambio) {
