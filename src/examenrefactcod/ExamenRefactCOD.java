@@ -9,13 +9,12 @@ public class ExamenRefactCOD {
     //LIstar los numeros según el numero de digitos indicado
     //Considero solo hasta numeros menores a 100000 (5 digitos), 
     //por el hecho de k buscar numeros primos a partir de 6 digitos, el proceso se hace muy lento.
-
     public static boolean p = false;
-    
+
     public static void main(String arg[]) {
-        int dig = 3;
+        int digCambio = 3;
         int ndig = 0;
-        if (dig <= 0) {
+        if (digCambio <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         for (int i = 1; i <= 99999; i++) {
@@ -29,7 +28,7 @@ public class ExamenRefactCOD {
             }
             ndig = contador;
 
-            if (ndig == dig) {
+            if (ndig == digCambio) {
                 if (i < 4) {
                     p = true;
                 } else {
